@@ -28,9 +28,7 @@ export class Application {
     // for gep supported games goto:
     // https://overwolf.github.io/api/electron/game-events/
     gepService.registerGames([
-      kGepSupportedGameIds.TeamfightTactics,
-      //kGepSupportedGameIds.DiabloIV,
-      //kGepSupportedGameIds.RocketLeague,
+      kGepSupportedGameIds.Valorant,
     ]);
   }
 
@@ -55,10 +53,7 @@ export class Application {
   private onOverlayServiceReady() {
     // Which games to support overlay for
     this.overlayService.registerToGames([
-      kGameIds.LeagueofLegends,
-      kGameIds.TeamfightTactics,
-      kGameIds.RocketLeague,
-      kGameIds.DiabloIV
+      kGameIds.Valorant
     ]);
   }
 }
