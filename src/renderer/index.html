@@ -1,86 +1,55 @@
-<div class="row">
-  <script defer src="renderer.js"></script>
-  </head><div class="row"></div>
-  <table class="span12">
-  <tbody>
-    <ul class="versions code">
-      <li class="electron-version"></li>
-    </ul>
-      <tr>
-          <td class="span1"><button id ='setRequiredFeaturesBtn' class="btn">setRequiredFeatures</button></td>
-          <td class="span1"><button id ='getInfoBtn' class="btn">getInfo</button></td>
-          <td class="span1"><button id ='createOSR' class="btn">Create OSR</button></td>
-          <td class="span1"><button id ='visibilityOSR' class="btn">Show all OSR</button></td>
-          <td class="span1"><button id ='updateHotkey' class="btn">update Hotkey</button></td>
-      </tr>
-      <script>
-   </script>
-     <script>
-      const changeOpacityValue = (element) => {
-        document.getElementById('opacityValue').value = element.value;
-      }
-      const animationDurationValue = (element) => {
-        document.getElementById('animationDuration').value = element.value;
-      }
-      window.app.initialize();
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PulsePlay - Valorant Stat Tracker</title>
+    <link href="./src/output.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white"> <!-- Dark Mode Background -->
+    <div class="flex h-screen">
+        <!-- Navigation Bar -->
+        <nav class="w-64 bg-gray-800 p-5"> <!-- Adjust width as needed -->
+            <h2 class="text-red-600 text-lg font-bold mb-4">Navigation</h2>
+            <!-- Placeholder Links -->
+            <ul>
+                <li class="text-red-500 hover:text-red-700">Link 1</li>
+                <li class="text-red-500 hover:text-red-700">Link 2</li>
+                <!-- More links as needed -->
+            </ul>
+        </nav>
 
-    </script>
-  </tbody>
-  </table>
-</div>
-<br/>
-<div>
-  <h2>Log:</h2>
-  <div class="row">
-  <div class="span12">
-    <textarea id="TerminalTextArea"
-      style="border: 1px solid grey; width:100%; height: 200px;">
-    </textarea>
-    <td class="span1">
-      <button style="margin-top: 10px;" id='clearTerminalTextAreaBtn' class="btn">
-        Clean
-      </button>
-    </td>
-  </div>
-</div>
-</div>
-<br>
-<div >
-  <div class="views" style="display: flex; gap: 24px;">
-    <div class="left-view">
-      <h2>Ad view:</h2>
-      <div style='width: 400px; height: 300px; border: 1px solid;background: transparent;'>
-        <owadview slotsize='400x300' cid='mainAd' />
-      </div>
+        <!-- Main Content -->
+        <div class="flex-1 p-10">
+            <!-- App Name and Username -->
+            <header class="flex justify-between items-center mb-6">
+                <h1 class="text-2xl font-bold text-red-600">PulsePlay</h1>
+                <span class="text-lg">Username Placeholder</span>
+            </header>
+
+            <!-- Stats Section -->
+            <section>
+                <!-- Rank, Winrate, KDA, Played Agents -->
+                <div class="grid grid-cols-2 gap-4 mb-6">
+                    <!-- Replace with actual content and styling -->
+                    <div class="p-4 bg-gray-800 rounded-lg">Rank with Image</div>
+                    <div class="p-4 bg-gray-800 rounded-lg">Winrate</div>
+                    <div class="p-4 bg-gray-800 rounded-lg">KDA</div>
+                    <div class="p-4 bg-gray-800 rounded-lg">Played Agents</div>
+                </div>
+
+                <!-- Match History -->
+                <div class="bg-gray-800 p-4 rounded-lg">
+                    <h2 class="text-xl font-semibold mb-3">Match History</h2>
+                    <!-- Placeholder for match history -->
+                    <ul>
+                        <li>Match 1 - Details</li>
+                        <li>Match 2 - Details</li>
+                        <!-- More matches -->
+                    </ul>
+                </div>
+            </section>
+        </div>
     </div>
-    <div class="left-view">
-      <h2>Input Exclusive:</h2>
-      <div style='width: 400px; height: 300px; border: 1px solid;background: transparent;'>
-        <label style="display: block; margin-bottom: 10px;">
-          Background Color
-          <input type="color" rgba value="#0c0c0c" id="colorPicker">
-        </label>
-         <label style="display: block; margin-bottom: 10px;">
-          <div>Opacity</div>
-          <input type="range" min="0.0" max="1.0" value="0.5" step="0.1" id="opacityRange"  onchange="changeOpacityValue(this)">
-          <input type="input" readonly value="0.5" id="opacityValue">
-        </label>
-        <label style="display: block; margin-bottom: 10px;">
-          <div>Animation Duration</div>
-          <input type="range" min="0" max="1000" value="100" step="10" id="animationDurationRange" onchange="animationDurationValue(this)">
-          <input type="input" readonly value="100" id="animationDuration">
-        </label>
-        <label style="display: block; margin-bottom: 10px;">
-          <div> Type </div>
-            <input type="radio" name="exclusiveType" value="native" checked="checked"> Native
-            <input type="radio" name="exclusiveType" value="customWindow"> As Window
-        </label>
-        <label style="display: block; margin-bottom: 10px;">
-          <div> hotkey Behavior </div>
-            <input type="radio" name="behavior" value="toggle" checked="checked"> toggle
-            <input type="radio" name="behavior" value="pressed"> pressed
-        </label>
-      </div>
-    </div>
-  </div>
-</div>
+</body>
+</html>
